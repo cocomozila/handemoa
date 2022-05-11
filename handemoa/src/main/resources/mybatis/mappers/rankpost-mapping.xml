@@ -209,6 +209,11 @@ where postnum = ${postnum}
 update post set viewcount = viewcount+1 where postnum = ${postnum}
 </update>
 
+<insert id="insertAlarm" parameterType="alarmdto">
+INSERT INTO handemoadb.alarm(id, caller, postnum, alarmcontent, read_al)
+	 VALUES(#{id}, #{caller}, #{postnum}, #{alarmcontent}, #{read_al});
+</insert>
+
 </mapper>
 
 

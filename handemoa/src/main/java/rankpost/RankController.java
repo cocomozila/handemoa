@@ -2,6 +2,7 @@ package rankpost;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -347,7 +348,7 @@ public class RankController {
 	
 	@PostMapping("/commentinsert")
 	@ResponseBody
-	public int commentInsert(HttpServletRequest request, int postnum, String memberid, String commentcontent) {
+	public int commentInsert(HttpServletRequest request, int postnum, String memberid, String commentcontent, String postmemberid) {
 		
 		HttpSession session = request.getSession();
 		
@@ -362,6 +363,21 @@ public class RankController {
 		vo.setMemberid(memberid);
 		vo.setCommentcontent(commentcontent);
 		vo.setLikecount(0);
+		
+		//댓글 알람기능
+		AlarmDTO alarm = new AlarmDTO();
+		alarm.setId(postmemberid);
+		alarm.setCaller(memberid);
+		alarm.setPostnum(postnum);
+		alarm.setAlarmcontent(commentcontent);
+		if ( alarm.getId().equals(alarm.getCaller()) ) {
+			alarm.setRead_al(true);
+		}
+		else {
+			alarm.setRead_al(false);
+		}		
+		int row2 = service.insertAlarm(alarm);
+		System.out.println("읽음유무: "+alarm.isRead_al());
 		
 		row = service.commentInsert(vo);
 		System.out.println("댓글작성완료");

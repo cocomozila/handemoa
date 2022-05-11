@@ -39,5 +39,7 @@ public interface RankPostService {
 	
 	public void rankingViewCountUp(int postnum);
 	
+	public int insertAlarm(AlarmDTO alarm);
+	
 	
 }

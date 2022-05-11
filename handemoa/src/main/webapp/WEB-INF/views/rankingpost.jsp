@@ -69,7 +69,8 @@
             contentType: "application/x-www-form-urlencoded; charset=UTF-8",
             data: { 'postnum': $('#comment_postnum').val(),
                     'memberid': $('#comment_memberid').val(),
-                    'commentcontent': $('#commentcontent').val()},
+                    'commentcontent': $('#commentcontent').val(),
+                    'postmemberid': $('#post_memberid').val()},
             success: function (a) {
                 if (a == 1) {
                     alert("댓글이 작성되었습니다.");

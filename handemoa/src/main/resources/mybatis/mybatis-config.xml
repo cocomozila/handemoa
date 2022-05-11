@@ -48,6 +48,7 @@
    <typeAlias type="rankpost.RankPostDTO" alias="rankpostdto"/>
    <typeAlias type="rankpost.RankBoardVO" alias="rankboardvo"/>
    <typeAlias type="rankpost.CommentVO" alias="commentvo"/>
+   <typeAlias type="rankpost.AlarmDTO" alias="alarmdto"/>
    
    
    <!-- 윤석님 -->

@@ -107,4 +107,9 @@ public class RankPostServiceImpl implements RankPostService {
 	public void rankingViewCountUp(int postnum) {
 		dao.rankingViewCountUp(postnum);
 	}
+	
+	@Override
+	public int insertAlarm(AlarmDTO alarm) {
+		return dao.insertAlarm(alarm);
+	}
 }
