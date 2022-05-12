@@ -41,5 +41,7 @@ public interface RankPostService {
 	
 	public int insertAlarm(AlarmDTO alarm);
 	
+	public List<AlarmDTO> alarmList(String id);
+	
 	
 }

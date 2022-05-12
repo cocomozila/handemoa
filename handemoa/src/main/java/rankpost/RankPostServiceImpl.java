@@ -112,4 +112,9 @@ public class RankPostServiceImpl implements RankPostService {
 	public int insertAlarm(AlarmDTO alarm) {
 		return dao.insertAlarm(alarm);
 	}
+	
+	@Override
+	public List<AlarmDTO> alarmList(String id) {
+		return dao.alarmList(id);
+	}
 }

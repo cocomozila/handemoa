@@ -352,8 +352,21 @@ h4{
     padding-right: 20px;
 }
 
+.rank_posot_inner_1_author {
+    color: gray;
+    padding-right: 20px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .rank_post_inner_2 > h3 {
     font-size: 23px;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .rank_post_inner_3 {

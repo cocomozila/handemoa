@@ -466,5 +466,22 @@ public class RankController {
 		return result;		
 	}
 	
+	@GetMapping("/alarm")
+	@ResponseBody
+	public List<AlarmDTO> alarmList(HttpServletRequest request, Model model) {
+		System.out.println("통신시작");
+		HttpSession session = request.getSession();		
+		
+		if (session.getAttribute("member") == null) {
+			return null;
+		}
+		MemberDTO memberdto = (MemberDTO) session.getAttribute("member");
+		System.out.println("통신시작2");
+		System.out.println("id :"+memberdto.getId());
+		
+		List<AlarmDTO> list = service.alarmList(memberdto.getId());
+		
+		return list;
+	}
 	
 }

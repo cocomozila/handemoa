@@ -214,6 +214,14 @@ INSERT INTO handemoadb.alarm(id, caller, postnum, alarmcontent, read_al)
 	 VALUES(#{id}, #{caller}, #{postnum}, #{alarmcontent}, #{read_al});
 </insert>
 
+<select id="alarmList" parameterType="String" resultType="alarmdto">
+SELECT *
+  FROM handemoadb.alarm
+ WHERE id = #{id}
+       AND read_al = false
+ORDER BY time_al DESC;
+</select>
+
 </mapper>
 
 

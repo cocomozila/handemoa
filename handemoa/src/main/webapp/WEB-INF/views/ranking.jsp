@@ -8,6 +8,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>한데모아 - Ranking</title>
     <link rel='stylesheet' type='text/css' href='css/ranking.css'>
+    <link rel='stylesheet' type='text/css' href='css/alarm.css'>
     <!-- 노토산스 폰트 시작-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +16,7 @@
     <!-- 노토산스 폰트 종료-->
     <script src="/jquery-3.6.0.min.js"></script>
     <script src='/js/index.js'></script>
+    <script src='/js/alarm.js'></script>
     <script>
     $(document).ready(function () {
 
@@ -205,8 +207,8 @@
                                                     <div class="rank_post_inner">
                                                         <div class="rank_post_inner_1">
                                                             <p>${list.regdate}</p>
-                                                            <p>${list.author}</p>
-                                                            <p>${list.classtitle}</p>
+                                                            <p class="rank_posot_inner_1_author">${list.author}</p>
+                                                            <p class="rank_posot_inner_1_author">${list.classtitle}</p>
                                                         </div>
                                                         <div class="rank_post_inner_2">
                                                             <a href="/rankingpost?postnum=${list.postnum}">
@@ -216,7 +218,7 @@
                                                         <div class="rank_post_inner_3">
                                                             <p><a href="/profile?nickname=${list.nickname}">${list.nickname}</a></p>
                                                             <div>
-                                                                <p>좋아요:${list.likecount}</p>
+                                                                <p>좋아요:${list.likecount-1}</p>
                                                                 <p>조회수:${list.viewcount}</p>
                                                             </div>
                                                         </div>
