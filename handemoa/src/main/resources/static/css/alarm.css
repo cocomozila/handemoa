@@ -1,9 +1,59 @@
 /*//////////////////////////////////////////*/
 /*////////////////    알람    //////////////*/
 
-.alarm{
+.alarm_btn_area {
+    display: flex;
+}
+
+.alarm_btn{
     width: 30px;
     height: 30px;
     background-color: gray;
+    border: none;
+    border-radius: 20px;
     color: white;
+}
+
+.alarmlist_area {
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    display: none;
+}
+
+.alarmcount {
+    width: 20px;
+    height: 20px;
+    display: none;
+    background-color: red;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.alarmcount_inner {
+    text-align: center;
+    color: white;
+}
+
+.alarmlist {
+    padding: 8px 0px 8px 0;
+    margin: 0 10px 0 10px;
+}
+
+.alarmlist_1 {
+    display: flex;
+}
+
+.alarmlist_1 > p {
+    font-size: 14px;
+}
+
+.alarmlist_date {
+    color: rgb(185, 185, 185);
+}
+
+.alarmlist_content {
+    font-size: 14px;
+    font-weight: 500;
 }
