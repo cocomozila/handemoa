@@ -8,7 +8,6 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>한데모아 - Ranking</title>
     <link rel='stylesheet' type='text/css' href='css/ranking.css'>
-    <link rel='stylesheet' type='text/css' href='css/alarm.css'>
     <!-- 노토산스 폰트 시작-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +15,7 @@
     <!-- 노토산스 폰트 종료-->
     <script src="/jquery-3.6.0.min.js"></script>
     <script src='/js/index.js'></script>
+    <link rel='stylesheet' type='text/css' href='css/alarm.css'>
     <script src='/js/alarm.js'></script>
     <script>
     $(document).ready(function () {
@@ -32,7 +32,7 @@
         console.log("code:"+code);
         location.replace("/rankingsearch?catedetailcode="+code+"&page=1&postsearch="+postsearch);        
     });
-
+    
     function start1() {
         console.log("start1");
         $.ajax({

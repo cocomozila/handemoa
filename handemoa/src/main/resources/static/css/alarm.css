@@ -16,9 +16,24 @@
 
 .alarmlist_area {
     width: 300px;
+    height: 400px;
+    overflow: scroll;
     background-color: white;
     position: absolute;
     display: none;
+}
+
+.alarmlist_area::-webkit-scrollbar {
+width: 8px;
+}
+.alarmlist_area::-webkit-scrollbar-thumb {
+background-color: #12379e;
+border-radius: 10px;
+}
+.alarmlist_area::-webkit-scrollbar-track {
+background-color: white;
+border-radius: 10px;
+box-shadow: inset 0px 0px 5px white;
 }
 
 .alarmcount {
@@ -56,4 +71,27 @@
 .alarmlist_content {
     font-size: 14px;
     font-weight: 500;
+}
+
+.alarmlist_content > a {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.alarmlist_content2 > a {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: rgb(185, 185, 185);
+}
+
+.alarmlist_caller2 {
+    color: rgb(185, 185, 185);
+}
+
+.alarmlist_text2 {
+    color: rgb(185, 185, 185);
 }

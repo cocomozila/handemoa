@@ -218,9 +218,14 @@ INSERT INTO handemoadb.alarm(id, caller, postnum, alarmcontent, read_al)
 SELECT *
   FROM handemoadb.alarm
  WHERE id = #{id}
-       AND read_al = false
 ORDER BY time_al DESC;
 </select>
+
+<update id="alarmRead" parameterType="Integer">
+UPDATE handemoadb.alarm
+   SET read_al = true
+   WHERE alarmnum = ${alarmnum}
+</update>
 
 </mapper>
 

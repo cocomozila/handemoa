@@ -46,4 +46,5 @@ public interface RankPostDAO {
 	public int insertAlarm(AlarmDTO alarm);
 	
 	public List<AlarmDTO> alarmList(String id);
+	public int alarmRead(int alarmnum);
 }

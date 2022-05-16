@@ -19,6 +19,8 @@
     <script type="text/javascript" src='/js/report.js'></script>
     <script type="text/javascript" src='/js/bookmark/bookmarkcheck.js'></script>
     <script src='/js/index.js'></script>
+    <link rel='stylesheet' type='text/css' href='css/alarm.css'>
+    <script src='/js/alarm.js'></script>
     <script>
     $(document).ready(function () {
 
