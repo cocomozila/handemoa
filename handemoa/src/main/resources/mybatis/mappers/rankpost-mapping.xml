@@ -227,6 +227,12 @@ UPDATE handemoadb.alarm
    WHERE alarmnum = ${alarmnum}
 </update>
 
+<delete id="deleteAllAlarm" parameterType="String">
+DELETE
+  FROM handemoadb.alarm
+ WHERE id = #{id};
+</delete>
+
 </mapper>
 
 

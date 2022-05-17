@@ -488,4 +488,19 @@ public class RankController {
 		return service.alarmRead(alarmnum);
 	}
 	
+	@GetMapping("/deleteallalarm")
+	@ResponseBody
+	public int deleteAllAlarm(HttpServletRequest request, Model model) {
+		HttpSession session = request.getSession();		
+		
+		if (session.getAttribute("member") == null) {
+			return 0;
+		}
+		MemberDTO memberdto = (MemberDTO) session.getAttribute("member");
+		int row = service.deleteAllAlarm(memberdto.getId());
+		System.out.println(row+"개의 알람 데이터 삭제");
+		
+		return 1;
+	}
+	
 }

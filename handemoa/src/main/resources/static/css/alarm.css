@@ -14,6 +14,18 @@
     color: white;
 }
 
+.alarm_controller {
+    display: flex;
+    width: 300px;
+    background-color: rgb(245, 245, 245);
+}
+
+.alarm_all_remove {
+    font-size: 14px;
+    padding: 5px 5px 5px 10px;
+    cursor:pointer
+}
+
 .alarmlist_area {
     width: 300px;
     height: 400px;
@@ -71,6 +83,7 @@ box-shadow: inset 0px 0px 5px white;
 .alarmlist_content {
     font-size: 14px;
     font-weight: 500;
+    cursor:pointer
 }
 
 .alarmlist_content > a {
@@ -78,6 +91,7 @@ box-shadow: inset 0px 0px 5px white;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    cursor:pointer
 }
 
 .alarmlist_content2 > a {
@@ -86,6 +100,7 @@ box-shadow: inset 0px 0px 5px white;
     overflow: hidden;
     text-overflow: ellipsis;
     color: rgb(185, 185, 185);
+    cursor:pointer
 }
 
 .alarmlist_caller2 {

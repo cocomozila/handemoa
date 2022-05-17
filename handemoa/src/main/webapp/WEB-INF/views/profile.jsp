@@ -110,7 +110,7 @@
 		                    
 		                    <c:choose>
 		                    <c:when test="${memberlist.profileimg != null}">
-		                    	<img src="css/images/${member.profileimg}" />
+		                    	<img src="css/images/${memberlist.profileimg}" />
 		                    </c:when>
 		                    <c:otherwise>
 		                   		 <img src="css/images/login_before.png"/>

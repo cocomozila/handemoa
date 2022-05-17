@@ -122,4 +122,9 @@ public class RankPostServiceImpl implements RankPostService {
 	public int alarmRead(int alarmnum) {
 		return dao.alarmRead(alarmnum);
 	}
+	
+	@Override
+	public int deleteAllAlarm(String id) {
+		return dao.deleteAllAlarm(id);
+	}
 }
