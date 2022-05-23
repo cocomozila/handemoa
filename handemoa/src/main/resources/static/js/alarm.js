@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     var alramTag = $('<div class="alarm"><div class="alarm_btn_area"><button class="alarm_btn">☎</button><div class="alarmcount"><p class="alarmcount_inner"></p></div></div><div class="alarmlist_area"><div class="alarm_controller"><p class="alarm_all_remove">전체 삭제</p></div></div></div>');
-    $('#nav_list').append(alramTag);
+    $('#search_area').prepend(alramTag);
 
     let alarmVisual = false;
     let alarmCount = 0;
@@ -34,7 +34,6 @@ $(document).ready(function () {
         alarmCount = 0;
         alarmReadCount = 0;
         alarmAjax();
-        nonAlarmList();
     });
 
     async function alarmAllRemove () {
@@ -109,5 +108,25 @@ $(document).ready(function () {
     $(".alarm_btn").click(function () {
         alarmSwitch();
     });
+
+    ////////////////////////////////////////////////////////
+    ///////////////////////// 토큰 /////////////////////////
+
+    $('#handemore_font').click(function () { 
+        console.log('security 버튼 실행');
+        $.ajax({
+            type: "get",
+            url: "/security/create/token",
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                console.log('token생성값: '+data.result);
+                token = data.result;
+                console.log('token변수 값: '+token);
+            }
+        });   
+    });
+
+
 
 });

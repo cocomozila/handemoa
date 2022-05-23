@@ -48,6 +48,9 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = "commupost")
 @MapperScan(basePackageClasses = commupost.CommuPostDAO.class)
 
+//스프링시큐리티
+@ComponentScan(basePackages = "security")
+
 
 
 

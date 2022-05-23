@@ -85,6 +85,22 @@
     //         }
     //     });                        
     // }
+
+    let token;
+
+    $('#security_btn2').click(function () { 
+        console.log('token 압축 버튼 실행');
+        $.ajax({
+            type: "get",
+            url: "/security/get/subject",
+            data: {},
+            dataType: "json",
+            success: function (data) {
+                    console.log('token해석 답신:'+ data.result);
+            }
+        });   
+    });
+
 });
     </script>
 </head>
@@ -142,6 +158,14 @@
                     <div class="nav_list_area">
                         <a href="/notice"> <!-- 해당 링크 이동 -->
                             <h4>공지사항</h4></a>
+                    </div>
+                                        <div class="nav_list_area">
+                        <a href="/notice"> <!-- 해당 링크 이동 -->
+                            <h4>HANDEMORE </h4></a>
+                    </div>
+                    <div>
+                        <button id="security_btn">토큰</button>
+                        <button id="security_btn2">토큰값 해석</button>
                     </div>
                     <!-- 알람 -->
 
